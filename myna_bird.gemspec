@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brendan Schwartz"]
-  s.date = %q{2010-10-20}
+  s.date = %q{2010-10-21}
   s.description = %q{Given an email address, MynaBird generates a name suitable for use in a host name}
   s.email = %q{bschwartz@wistia.com}
   s.extra_rdoc_files = [
@@ -17,18 +17,18 @@ Gem::Specification.new do |s|
      "README"
   ]
   s.files = [
-    ".document",
-     ".gitignore",
+    ".gitignore",
      "LICENSE",
      "README",
      "Rakefile",
      "VERSION",
      "lib/myna_bird.rb",
+     "myna_bird.gemspec",
      "spec/myna_bird_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/bschwartz/myna_bird}
+  s.homepage = %q{http://github.com/wistia/myna_bird}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
