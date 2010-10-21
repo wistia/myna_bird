@@ -11,18 +11,20 @@
 MynaBird converts email addresses into "account names" suitable for use in a
 host name.
 
-We use this here at Wistia. Users can sign up for an account using just
+We use this here at Wistia. A user can sign up for an account using just
 their email address, and in typical trendy SaaS fashion, they get an account 
 URL in the form of http://account-name.wistia.com. MynaBird performs the 
 conversion of their email into their new account name.
+
+It works like this: if the domain is a that of a known ISP or email provider
+(like Comcast or Gmail), then MynaBird uses the local part of their address as
+the name. Otherwise, MynaBird builds the account name from the domain.
 
 For example:
 
   brendan@wistia.com                  -> wistia
   brendan.schwartz@gmail.com          -> brendan-schwartz
-  brendan_schwartz@alumni.brown.edu   -> brendan-schwartz
   brendan+nospam@gmail.com            -> brendan
-  support@meetingzip.com              -> meetingzip
   support@gmail.com                   -> support-at-gmail
 	
 Ok, that last one is a bit of a special case, but you get the idea.
@@ -47,4 +49,4 @@ Questions:
   
 License:
 
-	Go nuts. See LICENSE for full details.
+  Go nuts. See LICENSE for full details.
