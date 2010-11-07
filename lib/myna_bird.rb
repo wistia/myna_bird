@@ -1,5 +1,8 @@
 class MynaBird
   
+  class MalformedEmailException < Exception
+  end
+  
   COMMON_LOCALS = %w(
     support info sales marketing admin webmaster help
   )
@@ -10,7 +13,7 @@ class MynaBird
     paracalls linkedin mynet interia.pl yandex.ru sina 126 lycos bol in me 
     voila.fr mail comcast netcom roadrunner verizon 1and1 att adelphia
     bigpond bluebottle blueyonder btopenworld charter cox earthlink sbc telus
-    mailinator charter rogers sympatico tiscali
+    mailinator charter rogers sympatico tiscali tmail
   ) + [
     /\.edu$/
   ]
@@ -20,8 +23,12 @@ class MynaBird
   end
   
   def initialize(email)
+    # email must be in a somewhat sane format
+    # i.e. have an @ sign and at least one letter or number on each side of it
+    raise MalformedEmailException unless email =~ /^[^@]*[a-z0-9][^@]*@[^@]*[a-z0-9][^@]*$/i
+    
     @email = email.downcase
-    @local, @domain = @email.split('@') 
+    @local, @domain = @email.split('@')
   end
   
   

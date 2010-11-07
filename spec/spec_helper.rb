@@ -4,6 +4,23 @@ require 'myna_bird'
 require 'spec'
 require 'spec/autorun'
 
-Spec::Runner.configure do |config|
+module ShouldAndShouldNotConvert
+  def it_should_convert(from, to_hash)
+    to = to_hash[:to]    
+    it "should convert '#{from}' to '#{to}'" do
+      MynaBird.convert(from) == to
+    end
+  end
   
+  def it_should_not_convert(from)
+    it "should raise MalformedEmailException when attempting to convert '#{from}'" do
+      lambda {
+        MynaBird.convert(from)
+      }.should raise_error(MynaBird::MalformedEmailException)
+    end
+  end
+end
+
+Spec::Runner.configure do |config|
+  config.extend(ShouldAndShouldNotConvert)
 end
