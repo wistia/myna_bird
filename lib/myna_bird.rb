@@ -13,7 +13,7 @@ class MynaBird
     paracalls linkedin mynet interia.pl yandex.ru sina 126 lycos bol in me 
     voila.fr mail comcast netcom roadrunner verizon 1and1 att adelphia
     bigpond bluebottle blueyonder btopenworld charter cox earthlink sbc telus
-    mailinator charter rogers sympatico tiscali tmail
+    mailinator charter rogers sympatico tiscali tmail sbcglobal
   ) + [
     /\.edu$/
   ]
