@@ -14,7 +14,7 @@ class MynaBird
     voila.fr mail comcast netcom roadrunner verizon 1and1 att adelphia
     bigpond bluebottle blueyonder btopenworld charter cox earthlink sbc telus
     mailinator charter rogers sympatico tiscali tmail sbcglobal aim windowslive
-    juno qq
+    juno qq optonline.net mailhaven.com
   ) + [
     /\.edu$/
   ]
