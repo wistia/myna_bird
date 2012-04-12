@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{myna_bird}
-  s.version = "0.2.4"
+  s.version = "0.2.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brendan Schwartz"]
-  s.date = %q{2012-01-02}
+  s.date = %q{2012-04-12}
   s.description = %q{Given an email address, MynaBird generates a name suitable for use in a host name}
   s.email = %q{bschwartz@wistia.com}
   s.extra_rdoc_files = [
