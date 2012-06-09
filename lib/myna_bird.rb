@@ -9,12 +9,12 @@ class MynaBird
   
   COMMON_DOMAINS = %w(
     hotmail msn live yahoo yahoo.co.uk ymail rocketmail gmail googlemail aol 
-    fastmail.fm web mail.ru rediff indiatimes lycos libero.it rambler.ru mac 
+    fastmail.fm web inbox freemail rediff indiatimes lycos libero.it rambler.ru mac 
     paracalls linkedin mynet interia.pl yandex.ru sina 126 lycos bol in me 
     voila.fr mail comcast netcom roadrunner verizon 1and1 att adelphia
     bigpond bluebottle blueyonder btopenworld charter cox earthlink sbc telus
     mailinator charter rogers sympatico tiscali tmail sbcglobal aim windowslive
-    juno qq optonline.net mailhaven.com shaw.ca
+    juno qq optonline.net mailhaven.com shaw.ca btinternet email orange.fr
   ) + [
     /\.edu$/
   ]
