@@ -7,7 +7,7 @@ begin
     gem.name = "myna_bird"
     gem.summary = %Q{Transform email addresses into account names for your app}
     gem.description = %Q{Given an email address, MynaBird generates a name suitable for use in a host name}
-    gem.email = "bschwartz@wistia.com"
+    gem.email = "brendan@wistia.com"
     gem.homepage = "http://github.com/wistia/myna_bird"
     gem.authors = ["Brendan Schwartz"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
