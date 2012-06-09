@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{myna_bird}
-  s.version = "0.2.5"
+  s.name = "myna_bird"
+  s.version = "0.2.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brendan Schwartz"]
-  s.date = %q{2012-04-12}
-  s.description = %q{Given an email address, MynaBird generates a name suitable for use in a host name}
-  s.email = %q{bschwartz@wistia.com}
+  s.date = "2012-06-09"
+  s.description = "Given an email address, MynaBird generates a name suitable for use in a host name"
+  s.email = "brendan@wistia.com"
   s.extra_rdoc_files = [
     "LICENSE",
     "README"
@@ -27,16 +27,15 @@ Gem::Specification.new do |s|
     "spec/spec.opts",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/wistia/myna_bird}
+  s.homepage = "http://github.com/wistia/myna_bird"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.6}
-  s.summary = %q{Transform email addresses into account names for your app}
+  s.rubygems_version = "1.8.11"
+  s.summary = "Transform email addresses into account names for your app"
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
     else
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
