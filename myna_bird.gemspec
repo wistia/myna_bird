@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "myna_bird"
-  s.version = "0.2.6"
+  s.version = "0.2.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brendan Schwartz"]
-  s.date = "2012-06-09"
+  s.date = "2012-07-18"
   s.description = "Given an email address, MynaBird generates a name suitable for use in a host name"
   s.email = "brendan@wistia.com"
   s.extra_rdoc_files = [
@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
     "README"
   ]
   s.files = [
+    ".rvmrc",
     "LICENSE",
     "README",
     "Rakefile",
