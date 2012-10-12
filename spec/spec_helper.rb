@@ -1,8 +1,7 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'myna_bird'
-require 'spec'
-require 'spec/autorun'
+require 'rspec'
 
 module ShouldAndShouldNotConvert
   def it_should_convert(from, to_hash)
@@ -21,6 +20,6 @@ module ShouldAndShouldNotConvert
   end
 end
 
-Spec::Runner.configure do |config|
+RSpec.configure do |config|
   config.extend(ShouldAndShouldNotConvert)
 end
