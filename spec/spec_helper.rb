@@ -7,7 +7,7 @@ module ShouldAndShouldNotConvert
   def it_should_convert(from, to_hash)
     to = to_hash[:to]    
     it "should convert '#{from}' to '#{to}'" do
-      MynaBird.convert(from) == to
+      MynaBird.convert(from).should == to
     end
   end
   
