@@ -16,6 +16,7 @@ describe MynaBird do
   it_should_convert 'BRENDAN@aol.com',                 :to => 'brendan'
   it_should_convert 'brendan@WISTIA.COM',              :to => 'wistia'
   it_should_convert 'BRENDAN@WISTIA',                  :to => 'wistia'
+  it_should_convert 'brendan@outlook.com',             :to => 'brendan'
   
   # bad input
   it_should_not_convert 'no.at.sign'

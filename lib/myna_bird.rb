@@ -69,6 +69,8 @@ class MynaBird
     COMMON_DOMAINS.each do |domain|
       if domain.is_a?(Regexp)
         return true if domain.match(@domain)
+      elsif domain =~ /\./
+        return true if /#{domain}$/.match(@domain)
       else
         return true if /^#{domain}\./.match(@domain)
       end
