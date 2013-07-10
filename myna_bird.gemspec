@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "myna_bird"
-  s.version = "0.2.8"
+  s.version = "0.2.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brendan Schwartz"]
-  s.date = "2012-10-12"
+  s.date = "2013-07-10"
   s.description = "Given an email address, MynaBird generates a name suitable for use in a host name"
   s.email = "brendan@wistia.com"
   s.extra_rdoc_files = [
@@ -32,11 +32,11 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/wistia/myna_bird"
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
+  s.rubygems_version = "2.0.3"
   s.summary = "Transform email addresses into account names for your app"
 
   if s.respond_to? :specification_version then
-    s.specification_version = 3
+    s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<jeweler>, [">= 0"])
