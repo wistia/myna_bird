@@ -15,7 +15,7 @@ class MynaBird
     bigpond bluebottle blueyonder btopenworld charter cox earthlink sbc telus
     mailinator charter rogers sympatico tiscali tmail sbcglobal aim windowslive
     juno qq optonline.net mailhaven.com shaw.ca btinternet email orange.fr
-    frontier.com outlook icloud
+    frontier.com outlook icloud yandex reliable-mail ymail
   ) + [
     /\.edu$/
   ]
