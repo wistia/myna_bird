@@ -5,7 +5,7 @@ require 'rspec'
 
 module ShouldAndShouldNotConvert
   def it_should_convert(from, to_hash)
-    to = to_hash[:to]    
+    to = to_hash[:to]
     it "should convert '#{from}' to '#{to}'" do
       MynaBird.convert(from).should == to
     end
@@ -22,4 +22,7 @@ end
 
 RSpec.configure do |config|
   config.extend(ShouldAndShouldNotConvert)
+  config.after do
+    MynaBird.reset_avoided_domains
+  end
 end

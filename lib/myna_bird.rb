@@ -24,6 +24,18 @@ class MynaBird
     new(email).name
   end
 
+  def self.reset_avoided_domains
+    @avoided_domains = nil
+  end
+
+  def self.avoided_domains=(keys)
+    @avoided_domains = keys
+  end
+
+  def self.avoided_domains
+    @avoided_domains || []
+  end
+
   def initialize(email)
     # email must be in a somewhat sane format
     # i.e. have an @ sign and at least one letter or number on each side of it
@@ -36,11 +48,11 @@ class MynaBird
 
   # extract the name
   def name
-    if common_local? && common_domain?
+    if common_local? && (common_domain? || avoided_domain?)
       local_name + '-at-' + domain_name
     elsif common_local?
       domain_name
-    elsif common_domain?
+    elsif (common_domain? || avoided_domain?)
       local_name
     else
       domain_name
@@ -63,6 +75,12 @@ class MynaBird
     name.gsub!(/\-$/,'')
     name.gsub!(/^\-/,'')
     name
+  end
+
+  def avoided_domain?
+    self.class.avoided_domains.any? do |domain|
+      /#{domain}/.match(@domain)
+    end
   end
 
   def common_domain?
