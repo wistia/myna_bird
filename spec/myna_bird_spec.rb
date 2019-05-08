@@ -26,4 +26,10 @@ describe MynaBird do
   it_should_not_convert '@@@@'
   it_should_not_convert '++@++'
 
+  context 'domain should be avoided' do
+    it 'uses the local name' do
+      MynaBird.avoided_domains = ['post-jazz']
+      MynaBird.convert('davej@post-jazz.no').should == 'davej'
+    end
+  end
 end
