@@ -25,37 +25,37 @@ the name. Otherwise, MynaBird builds the account name from the domain.
 
 For example:
 
-  brendan@wistia.com                  -> wistia
-  brendan.schwartz@gmail.com          -> brendan-schwartz
-  brendan+nospam@gmail.com            -> brendan
-  support@gmail.com                   -> support-at-gmail
+    brendan@wistia.com                  -> wistia
+    brendan.schwartz@gmail.com          -> brendan-schwartz
+    brendan+nospam@gmail.com            -> brendan
+    support@gmail.com                   -> support-at-gmail
 
 Ok, that last one is a bit of a special case, but you get the idea.
 
 
-Usage:
+## Usage
 
-  require 'myna_bird'
-  MynaBird.convert('brendan@wistia.com')  #=> 'wistia'
+    require 'myna_bird'
+    MynaBird.convert('brendan@wistia.com')  #=> 'wistia'
 
 You can also tell MynaBird to avoid a list of domains. No need to include the
 TLD, just a second-level domain. For example:
 
-  MynaBird.avoid_domains = ['coolmail', 'bestmail']
-  MynaBird.convert('best.business@coolmail.com')  #=> 'best-business'
+    MynaBird.avoid_domains = ['coolmail', 'bestmail']
+    MynaBird.convert('best.business@coolmail.com')  #=> 'best-business'
 
 
-Specs:
+## Specs
 
   Just run "rake spec" to run the specs.
   Don't be shy, feel free to add more examples.
 
 
-Questions:
+## Questions
 
   Feel free to email me at brendan@wistia.com with any questions.
 
 
-License:
+## License:
 
   Go nuts. See LICENSE for full details.
