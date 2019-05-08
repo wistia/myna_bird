@@ -38,6 +38,12 @@ Usage:
   require 'myna_bird'
   MynaBird.convert('brendan@wistia.com')  #=> 'wistia'
 
+You can also tell MynaBird to avoid a list of domains. No need to include the
+TLD, just a second-level domain. For example:
+
+  MynaBird.avoid_domains = ['coolmail', 'bestmail']
+  MynaBird.convert('best.business@coolmail.com')  #=> 'best-business'
+
 
 Specs:
 
