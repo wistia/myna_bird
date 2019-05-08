@@ -28,8 +28,8 @@ class MynaBird
     @avoided_domains = nil
   end
 
-  def self.avoided_domains=(keys)
-    @avoided_domains = keys
+  def self.avoided_domains=(domains)
+    @avoided_domains = domains
   end
 
   def self.avoided_domains
