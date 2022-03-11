@@ -1,0 +1,18 @@
+# this is a catalog entity descriptor file for our Backstage instance (https://backstage.wistia.cloud)
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: myna_bird
+  description: Transforms an email address into an account name
+  annotations:
+    github.com/project-slug: wistia/myna_bird
+    backstage.io/techdocs-ref: dir:.
+  spec:
+    type: library
+    owner: app-platform
+    lifecycle: production
+    system: VMA
+  tags:
+    - lang#ruby
+    - pkg#rubygem
