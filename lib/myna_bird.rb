@@ -79,22 +79,14 @@ class MynaBird
 
   def avoided_domain?
     self.class.avoided_domains.any? do |domain|
-      /#{domain}/.match(@domain)
+      matches_domain?(domain)
     end
   end
 
   def common_domain?
-    COMMON_DOMAINS.each do |domain|
-      if domain.is_a?(Regexp)
-        return true if domain.match(@domain)
-      elsif domain =~ /\./
-        return true if /#{domain}$/.match(@domain)
-      else
-        return true if /^#{domain}\./.match(@domain)
-      end
+    COMMON_DOMAINS.any? do |domain|
+      matches_domain?(domain)
     end
-
-    return false
   end
 
   def common_local?
@@ -109,4 +101,17 @@ class MynaBird
     return false
   end
 
+  private
+
+  def matches_domain?(domain)
+    if domain.is_a?(Regexp)
+      return true if domain.match(@domain)
+    elsif domain =~ /\./
+      return true if /#{domain}$/.match(@domain)
+    else
+      return true if /^#{domain}\./.match(@domain)
+    end
+
+    false
+  end
 end
